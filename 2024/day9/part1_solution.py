@@ -15,7 +15,7 @@ while map_index < map_len:
     # file block
     if map_index % 2 == 0:
         for i in range(disk_map[map_index]):
-            checksum += disk_index * int((map_index + 1) / 2)
+            checksum += disk_index * int(map_index / 2)
             disk_index += 1
     # free block
     else:
